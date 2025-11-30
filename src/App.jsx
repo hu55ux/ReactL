@@ -1,9 +1,9 @@
 import React from 'react'
+import Navigator from './components/Navigator'
 
 const App = () => {
   return (
-    <div className='w-full h-screen flex justify-center items-center'>App
-    <p>dfdf</p></div>
+    { Navigator }
   )
 }
 
