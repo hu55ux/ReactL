@@ -14,6 +14,7 @@ export function FlowCard() {
             <p className="font-normal text-gray-700 dark:text-gray-400">
                 Here are the biggest enterprise technolodgy acquisitions of 2021 so far, in reverse chronological order.
             </p>
+            
         </Card>
     );
 }
