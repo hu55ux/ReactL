@@ -1,14 +1,27 @@
 import { Routes, Route } from 'react-router-dom';
-import Products from "../pages/Products"
-import Details from "../pages/Details"
+import Products from "../pages/Products";
+import Details from "../pages/Details";
+import NotFound from "../pages/NotFound";
+import UserAccount from "../pages/UserAccount";
+import UserDetails from "../pages/UserDetails";
+import UserLayout from '../pages/UserLayout';
+import FlowPage from '../pages/FlowPage';
+
 
 const Navigator = () => {
     return (
         <Routes>
-            <Route path="/" element={<div>{Products}</div>} />
-            <Route path="/details" element={<div>{Details}</div>} />
-        </Routes>
-    )
-}
+            <Route path="/" element={<FlowPage />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/details/:id" element={<Details />} />
+            <Route path='user' element={<UserLayout />}>
+                <Route path="/userAccount" element={<UserAccount />} />
+                <Route path="/userData" element={<UserDetails />} />
+            </Route>
 
-export default Navigator
+            <Route path="*" element={<NotFound />} />
+        </Routes>
+    );
+};
+
+export default Navigator;
