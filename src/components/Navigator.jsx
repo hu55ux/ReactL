@@ -6,6 +6,7 @@ import UserAccount from "../pages/UserAccount";
 import UserDetails from "../pages/UserDetails";
 import UserLayout from '../pages/UserLayout';
 import FlowPage from '../pages/FlowPage';
+import Login from '../pages/Login';
 
 
 const Navigator = () => {
@@ -14,9 +15,10 @@ const Navigator = () => {
             <Route path="/" element={<FlowPage />} />
             <Route path="/products" element={<Products />} />
             <Route path="/details/:id" element={<Details />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/userDetails" element={<UserDetails />} />
             <Route path='user' element={<UserLayout />}>
                 <Route path="/userAccount" element={<UserAccount />} />
-                <Route path="/userData" element={<UserDetails />} />
             </Route>
 
             <Route path="*" element={<NotFound />} />
